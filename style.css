@@ -298,7 +298,7 @@ body{
 .option-list .option.disabled{
     pointer-events: none;
 }
-
+/* Quiz footer */
 .quiz-box .quiz-footer{
     display: flex;
     align-items: center;
@@ -336,7 +336,7 @@ body{
     background: #950170;
     border-color: #950170;
 }
-
+/* Result section */
  .quiz-section .result-box{
    position: absolute;
    top: 50%;
@@ -522,6 +522,57 @@ body{
         font-size: 12px;
     }
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .quiz-box, .popup-info, .result-box {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .quiz-box .question-text {
+    font-size: 18px;
+  }
+
+  .option {
+    font-size: 16px;
+  }
+
+  .score-text {
+    font-size: 20px;
+  }
+
+  .circular-progress {
+    width: 100px;
+    height: 100px;
+  }
+
+  .progress-value {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .quiz-box .question-text {
+    font-size: 16px;
+  }
+
+  .option {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .score-text {
+    font-size: 18px;
+  }
+}
+
+
 
 
 
