@@ -59,10 +59,28 @@ body{
     pointer-events: none;
 }
 
-.container{
+.container {
     display: flex;
     height: 100vh;
     width: 200%;
+}
+
+/* Contact Page Standalone Centering */
+body.contact-page .container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+body.contact-page .contact-section {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    background: rgba(9, 0, 29, 0.85);
 }
 
 .home{
@@ -449,128 +467,255 @@ body{
     color: #fff;
 }
 
-@media (max-width: 768px){
-    .header{
-        padding: 10px 5%;
-    }
-    .logo{
-        font-size: 20px;
-    }
-    .navbar a{
-        font-size: 14px;
-        margin-left: 15px;
-    }
-    .home-content h1{
-        font-size: 36px;
-    }
-    .home-content p{
-        font-size: 12px;
-    }
-    .home-content .start-btn{
-        width: 130px;
-        height: 40px;
-        font-size: 12px;
-    }
-    .popup-info{
-        width: 85%;
-    }
-    .popup-info h2{
-        font-size: 28px;
-    }
-    .popup-info .btn-group .info-btn{
-        width: 90px;
-        height: 35px;
-        font-size: 12px;
-    }
-    .quiz-section .quiz-box{
-        width: 85%;
-    }
-    .quiz-box h1{
-        font-size: 22px;
-    }
-    .quiz-box .question-text{
-        font-size: 16px;
-    }
-    .option-list .option{
-        font-size: 12px;
-    }
-    .quiz-footer .next-btn{
-        width: 70px;
-        height: 35px;
-        font-size: 12px;
-    }
-    .result-box{
-        width: 85%;
-    }
-    .result-box h2{
-        font-size: 28px;
-    }
-    .percent-container .circular-progress{
-        width: 150px;
-        height: 150px;
-    }
-    .percent-container .circular-progress::before{
-        width: 100px;
-        height: 100px;
-    }
-    .progress-value{
-        font-size: 28px;
-    }
-    .buttons button{
-        width: 100px;
-        height: 35px;
-        font-size: 12px;
-    }
+/* Contact Page Styles */
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(9, 0, 29, 0.85);
+    width: 100%;
 }
 
-/* Responsive adjustments */
+.contact-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 40px 32px;
+    max-width: 400px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-box h1 {
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+    color: #c408c4;
+    letter-spacing: 1px;
+}
+
+.contact-form .input-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #c408c4;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    margin-bottom: 4px;
+    transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 1.5px solid #fff;
+}
+
+.contact-form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #c408c4;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 10px #c408c4;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.contact-form .submit-btn:hover {
+    background: #09001d;
+    box-shadow: none;
+}
+
+/* About Page Standalone Centering */
+body.about-page .container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+body.about-page .about-section {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    background: rgba(9, 0, 29, 0.85);
+}
+.about-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 40px 32px;
+    max-width: 500px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.about-box h1 {
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+    color: #c408c4;
+    letter-spacing: 1px;
+}
+.about-box p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Services Page Standalone Centering */
+body.services-page .container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+body.services-page .services-section {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    background: rgba(9, 0, 29, 0.85);
+}
+.services-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 40px 32px;
+    max-width: 500px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.services-box h1 {
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+    color: #c408c4;
+    letter-spacing: 1px;
+}
+.services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.services-list li {
+    font-size: 1.1rem;
+    margin: 16px 0;
+    padding-left: 0;
+    text-align: left;
+    position: relative;
+}
+.services-list li:before {
+    content: '\2022';
+    color: #c408c4;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 10px 3%;
+  }
+  .main {
+    background-position: center;
+  }
+  .about-box, .services-box, .contact-box {
+    max-width: 90vw;
+    padding: 24px 10px;
+  }
+}
+
 @media (max-width: 768px) {
-  .quiz-box, .popup-info, .result-box {
-    width: 95%;
-    padding: 20px;
+  .header {
+    padding: 10px 2%;
   }
-
-  .quiz-box .question-text {
-    font-size: 18px;
-  }
-
-  .option {
-    font-size: 16px;
-  }
-
-  .score-text {
+  .logo {
     font-size: 20px;
   }
-
-  .circular-progress {
-    width: 100px;
-    height: 100px;
+  .navbar a {
+    font-size: 14px;
+    margin-left: 10px;
   }
-
-  .progress-value {
-    font-size: 20px;
+  .main {
+    background-size: cover;
+  }
+  .about-box, .services-box, .contact-box {
+    max-width: 98vw;
+    padding: 18px 4px;
+  }
+  .about-box h1, .services-box h1, .contact-box h1 {
+    font-size: 1.5rem;
+  }
+  .about-box p, .services-list li, .contact-form label, .contact-form input, .contact-form textarea {
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
-  button {
-    width: 100%;
-    font-size: 14px;
+  .header {
+    flex-direction: column;
+    padding: 6px 1%;
   }
-
-  .quiz-box .question-text {
+  .logo {
     font-size: 16px;
+    margin-bottom: 6px;
   }
-
-  .option {
-    padding: 8px 12px;
-    font-size: 14px;
+  .navbar a {
+    font-size: 12px;
+    margin-left: 6px;
   }
-
-  .score-text {
-    font-size: 18px;
+  .main {
+    min-height: 100vh;
+    background-size: cover;
+  }
+  .about-box, .services-box, .contact-box {
+    max-width: 100vw;
+    padding: 10px 2px;
+  }
+  .about-box h1, .services-box h1, .contact-box h1 {
+    font-size: 1.1rem;
+  }
+  .about-box p, .services-list li, .contact-form label, .contact-form input, .contact-form textarea {
+    font-size: 0.85rem;
+  }
+  .contact-form .submit-btn {
+    font-size: 0.95rem;
+    padding: 10px;
   }
 }
+
 
 
 
